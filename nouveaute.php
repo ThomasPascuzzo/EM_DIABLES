@@ -56,7 +56,7 @@
       <div class="titre">
       <h2>Nouveauté</h2>
     </div>
-    <iframe src="https://player.vimeo.com/video/299445287" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <iframe src="https://player.vimeo.com/video/301022932" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
       <!-- Main Content logoContact.jpg -->
