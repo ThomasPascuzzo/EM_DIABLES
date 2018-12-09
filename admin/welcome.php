@@ -7,6 +7,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
+
+  require_once'config.php';
 ?>
 
 <!DOCTYPE html>
@@ -30,35 +32,32 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </p>
 <h4>Gestion des évenements </h4>
 
-<a>Ajouter un évenment</h2>
+<a href="ajouter.php?type=evenement">Ajouter un évenment</a>
 <table class="table">
   <thead class="thead-light">
     <tr>
       <th scope="col">#</th>
       <th scope="col">Nom</th>
-      <th scope="col">Description</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+
+<?php
+  $sql = $pdo->query('SELECT * FROM evenement');
+
+  while ($lEvent = $sql->fetch())
+  {
+  echo '  <tr>
+      <th scope="row">'.$lEvent["id"].'</th>
+      <td>'.$lEvent["titre"].'</td>
+      <td><a href="google.fr">Modifier</a> <a href="">Supprimer</a></td>
+    </tr>';
+  }
+
+
+ ?>
+
   </tbody>
 </table>
 </body>
