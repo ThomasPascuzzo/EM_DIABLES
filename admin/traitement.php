@@ -37,7 +37,7 @@ if ($_POST["titre"] && $_FILES['image'] && $_POST["corps"])
 
 
 
-      $req = $pdo->prepare('INSERT INTO evenement(id, titre, img, corps) VALUES (null,:titre,:image,:corps)');
+      $req = $pdo->prepare('INSERT INTO evenement(id, titre, img, corps, date_creation) VALUES (null,:titre,:image,:corps, CURRENT_TIMESTAMP())');
       $req->execute(array(
         'titre' => $_POST["titre"],
         'image' => $_FILES['image']['name'],

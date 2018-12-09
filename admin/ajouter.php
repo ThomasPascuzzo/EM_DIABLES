@@ -48,7 +48,7 @@ echo '
    <textarea class="form-control" name="corps" rows="3"></textarea>
  </div>
 
-  <input type="submit" class="btn btn-primary" value="Valider">Valider</button>
+  <input type="submit" class="btn btn-primary" value="Valider"></button>
 
 </form>
 ';
