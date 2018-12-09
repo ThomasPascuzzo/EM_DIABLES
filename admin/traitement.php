@@ -50,4 +50,21 @@ if ($_POST["titre"] && $_FILES['image'] && $_POST["corps"])
 
 }
 
+if ($_POST["idEvenement"])
+{
+  // modification en base
+
+
+
+  $req = $pdo->prepare('UPDATE evenement SET titre = :titre, corps = :corps WHERE evenement.id = '.$_POST["idEvenement"].'');
+  $req->execute(array(
+    'titre' => $_POST["titre"],
+    'corps' => $_POST["corps"]
+
+    ));
+
+  echo 'L \' évenement a bien été modifié!';
+  echo '<br><a href="welcome.php">Retour</a>';
+}
+
  ?>

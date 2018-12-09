@@ -51,7 +51,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   echo '  <tr>
       <th scope="row">'.$lEvent["id"].'</th>
       <td>'.$lEvent["titre"].'</td>
-      <td><a href="google.fr">Modifier</a></td>
+      <td><a href="modifier.php?idEvenement='.$lEvent["id"].'">Modifier</a></td>
     </tr>';
   }
 
