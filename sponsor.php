@@ -49,7 +49,7 @@
       </style>
    </head>
    <body id="page-top">
-      <?php require_once 'menu.html'; ?>
+      <?php require_once 'menu.php'; ?>
       <div class="intro">
          Vous souhaitez faire partie de nos sponsors / partenaires ? <br> Contactez-nous à l'adresse mail suivante : <a href="mailto:polesponsors@emdiables.fr">polesponsors@emdiables.fr</a>
       </div>

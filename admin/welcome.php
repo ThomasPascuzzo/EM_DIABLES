@@ -60,5 +60,38 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
   </tbody>
 </table>
+
+<h4>Gestion des sports </h4>
+
+<a href="ajouter.php?type=sport">Ajouter un sport</a>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+<?php
+  $sql = $pdo->query('SELECT * FROM sport');
+
+  while ($leSport = $sql->fetch())
+  {
+  echo '  <tr>
+      <th scope="row">'.$leSport["id"].'</th>
+      <td>'.$leSport["nom"].'</td>
+      <td><a href="modifier.php?idSport='.$leSport["id"].'">Modifier</a></td>
+    </tr>';
+  }
+
+
+ ?>
+
+  </tbody>
+</table>
+
+
 </body>
 </html>

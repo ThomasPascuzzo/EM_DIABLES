@@ -38,7 +38,7 @@
 
    </head>
    <body id="page-top">
-      <? require_once 'menu.html'; ?>
+      <? require_once 'menu.php'; ?>
       <!-- Main Content -->
       <div class="container">
          <div class="row">

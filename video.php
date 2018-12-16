@@ -35,7 +35,7 @@
       </style>
    </head>
    <body id="page-top">
-      <?php require_once 'menu.html'; ?>
+      <?php require_once 'menu.php'; ?>
       <div class="titre">
          <h2> Retrouvez ici toutes nos vidéos </h2>
       </div>

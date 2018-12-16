@@ -55,9 +55,30 @@ echo '
 ';
 }
 
-else {
-  echo 'error';
-}?>
+if ($_GET["idSport"])
+{
+  $id = $_GET["idSport"];
+  $sql = $pdo->query('SELECT * FROM sport WHERE id = '.$id.'');
+
+  $lEvent = $sql->fetch();
+
+echo "<h4> Gestion des sports </h4>";
+echo '
+<form action="traitement.php" method="post" enctype="multipart/form-data">
+
+  <div class="form-group">
+    <label for="formGroupExampleInput">Titre</label>
+    <input type="text" class="form-control" name="nomSportModifier" placeholder="Nom du Sport" value="'.$lEvent["nom"].'">
+  </div>
+
+
+  <input id="idSport" name="idSport" type="hidden" value="'.$id.'">
+  <input type="submit" class="btn btn-primary" value="Modifier"></button>
+
+</form>
+';
+}
+?>
 
 </body>
 </html>

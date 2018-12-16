@@ -46,7 +46,7 @@
 
    </head>
    <body id="page-top">
-      <? require_once 'menu.html'; ?>
+      <? require_once 'menu.php'; ?>
         <img class="img-fluid2" src="img/contactLogo.png" alt="">
       <!-- Main Content logoContact.jpg -->
       <div class="container">

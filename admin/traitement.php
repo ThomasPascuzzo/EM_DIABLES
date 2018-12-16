@@ -67,4 +67,34 @@ if ($_POST["idEvenement"])
   echo '<br><a href="welcome.php">Retour</a>';
 }
 
+
+if ($_POST["nomSport"]) {
+
+  $req = $pdo->prepare('INSERT INTO sport(id, nom) VALUES (null,:nom)');
+  $req->execute(array(
+    'nom' => $_POST["nomSport"],
+
+    ));
+
+  echo 'Le sport a bien été ajouté !';
+  echo '<br><a href="welcome.php">Retour</a>';
+
+}
+
+if ($_POST["idSport"])
+{
+  // modification en base
+
+
+
+  $req = $pdo->prepare('UPDATE sport SET nom = :nom WHERE sport.id = '.$_POST["idSport"].'');
+  $req->execute(array(
+    'nom' => $_POST["nomSportModifier"]
+
+    ));
+
+  echo 'Le sport a bien été modifié!';
+  echo '<br><a href="welcome.php">Retour</a>';
+}
+
  ?>

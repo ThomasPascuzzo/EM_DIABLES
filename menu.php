@@ -1,3 +1,5 @@
+<?php require_once"admin/config.php"; ?>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
    <a class="navbar-brand" href="index.php">EM'DIABLÉS</a>
    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,6 +17,25 @@
          <li class="nav-item">
             <a class="nav-link" href="evenement.php">Évenements</a>
          </li>
+
+         <div class="dropdown">
+           <a class="nav-link" data-toggle="dropdown">
+             Résumé
+           </a>
+
+
+           <div class="dropdown-menu">
+             <?php $sql = $pdo->query('SELECT * FROM sport');
+             while ($leSport = $sql->fetch())
+             {
+             echo '<a class="dropdown-item" href="#">'.$leSport['nom'].'</a>';
+
+           }?>
+           </div>
+         </div>
+
+
+
          <li class="nav-item">
             <a class="nav-link" href="sponsor.php">Sponsors</a>
          </li>
@@ -24,6 +45,9 @@
          <li class="nav-item">
             <a class="nav-link" href="contact.php">Contact</a>
          </li>
+
+
+
       </ul>
    </div>
 </nav>

@@ -49,6 +49,24 @@
                   <li class="nav-item">
                      <a class="nav-link" href="evenement.php">Évenements</a>
                   </li>
+
+                  <div class="dropdown">
+                    <a class="nav-link" data-toggle="dropdown">
+                      Résumé
+                    </a>
+
+
+                    <div class="dropdown-menu">
+                      <?php require_once"admin/config.php";
+                      $sql = $pdo->query('SELECT * FROM sport');
+                      while ($leSport = $sql->fetch())
+                      {
+                      echo '<a class="dropdown-item" href="#">'.$leSport['nom'].'</a>';
+
+                    }?>
+                    </div>
+                  </div>
+
                   <li class="nav-item">
                      <a class="nav-link" href="sponsor.php">Sponsors</a>
                   </li>

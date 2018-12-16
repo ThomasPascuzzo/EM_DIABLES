@@ -56,7 +56,35 @@ echo '
 
 else {
   echo 'error';
-}?>
+}
+
+
+if ($_GET["type"] == "sport")
+{
+
+echo "<h4> Gestion des sports </h4>";
+echo '
+<form action="traitement.php" method="post" enctype="multipart/form-data">
+
+  <div class="form-group">
+    <label for="formGroupExampleInput">Nom du sport</label>
+    <input type="text" class="form-control" name="nomSport" placeholder="Nom du sport">
+  </div>
+
+
+  <input type="submit" class="btn btn-primary" value="Valider"></button>
+
+</form>
+';
+}
+
+else {
+  echo 'error';
+}
+
+
+
+?>
 
 </body>
 </html>
